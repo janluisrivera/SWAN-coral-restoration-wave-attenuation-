@@ -1,0 +1,65 @@
+SWAN   1                                Swan standard spectral file, version
+$   Data produced by SWAN version 41.51               
+$   Project: Parguera 3m Grid;  run number:     
+TIME                                    time-dependent data
+     1                                  time coding option
+LOCATIONS                               locations in x-y-space
+     1                                  number of locations
+   702200.0000  1984100.0000
+AFREQ                                   absolute frequencies in Hz
+    21                                  number of frequencies
+    0.0400
+    0.0470
+    0.0552
+    0.0648
+    0.0761
+    0.0894
+    0.1051
+    0.1234
+    0.1450
+    0.1703
+    0.2000
+    0.2349
+    0.2759
+    0.3241
+    0.3807
+    0.4472
+    0.5253
+    0.6170
+    0.7248
+    0.8513
+    1.0000
+QUANT
+     3                                  number of quantities in table
+EnDens                                  energy densities in J/m2/Hz
+J/m2/Hz                                 unit
+   -0.9900E+02                          exception value
+NDIR                                    average nautical direction in degr
+degr                                    unit
+   -0.9990E+03                          exception value
+DSPRDEGR                                directional spreading                   
+degr                                    unit
+   -0.9000E+01                          exception value
+20250720.000000                         date and time
+LOCATION     1
+ -0.9900E+02 -999.0   -9.0
+ -0.9900E+02 -999.0   -9.0
+  0.9350E+01   66.5   16.1
+  0.9191E+02   66.6   16.0
+  0.3601E+03   66.9   16.1
+  0.5068E+03   67.2   15.9
+  0.1533E+03   67.6   15.8
+  0.8552E+02   68.2   15.4
+  0.4405E+02   69.0   14.8
+  0.2208E+02   70.2   14.0
+  0.1157E+02   72.0   13.4
+  0.6701E+01   74.4   12.3
+  0.4210E+01   78.1   11.5
+  0.2604E+01   84.2   11.6
+  0.1436E+01   90.8   11.5
+  0.7006E+00   96.0   12.2
+  0.2763E+00   99.1   12.0
+  0.6078E-01  100.7   12.0
+  0.3946E-02  101.4   12.8
+  0.2926E-04  104.4   19.7
+  0.4290E-06  170.4   23.2
