@@ -1,0 +1,245 @@
+1
+
+                    Execution started at 20260217.024428         
+
+
+
+                    ---------------------------------------
+                                     SWAN
+                    SIMULATION OF WAVES IN NEAR SHORE AREAS
+                             VERSION NUMBER 41.51               
+                    ---------------------------------------
+
+
+    
+ PROJECT 'Parguera 3m Grid' ' '
+    
+ 'Parguera 3m resolution test'
+    
+ 'Bathymetry: Reduced 3m grid from 3m CUDEM'
+    
+ 
+    
+ MODE NONSTATIONARY TWODIMENSIONAL
+    
+ 
+    
+ SET DEPMIN 0.10 INRHOG 1 NAUTICAL
+    
+ COORDINATES CARTESIAN
+    
+ 
+    
+ CGRID CURVILINEAR 283 449 EXC 9.999000e+003 &
+        CIRCLE 36 0.04 1.0 20
+ Resolution in sigma-space: df/f =  0.1746
+    
+ READGRID COORDINATES 1 'E:\Swan_Projects\Parguera_Meters\Parg_m_ROI.grd' 4 0 0 FREE
+    
+ 
+    
+ INPGRID BOTTOM CURVILINEAR 0 0 283 449 EXC 9.999000e+003
+    
+ READINP BOTTOM 1 'E:\Swan_Projects\Parguera_Meters\Bathymetry_SLR\Parg_m_ROI_Year0.bot' 4 0 FREE
+    
+ 
+    
+ INPGRID NPLANTS1 CURVILINEAR 0 0 283 449 EXC 9.999000e+003
+    
+ READINP NPLANTS1 1 'E:\VegetationPatch_SWAN\Final_20yr_CoralVeg\Orbicella_faveolata\NPLANTS_patch.dat' 4 0 FREE
+    
+ 
+    
+ VEGetation 1 0.02 0.1 1 0.5
+    
+ 
+    
+ BOUNDPAR1 SHAPESPEC JONSWAP 3.3 PEAK DSPR DEGREES
+    
+ BOUNDPAR2 SEGMENT IJ 283 0 283 449 CONSTANT 1.0 14.0 130.0 22.5
+    
+ BOUNDPAR2 SEGMENT IJ 0 449 283 449 CONSTANT 1.0 14.0 130.0 22.5
+    
+ 
+    
+ GEN3
+    
+ BREAKING CONSTANT 1.0 0.73
+    
+ FRICTION COLLINS 0.28
+    
+ WCAP KOM 2.36E-5 3.02E-3 2.0 1.0 1.0
+    
+ PROP BSBT
+    
+ OFF QUAD
+    
+ 
+    
+ BLOCK 'COMPGRID' NOHEADER 'depth.mat'  LAY 4 DEPTH 1.
+    
+ BLOCK 'COMPGRID' NOHEADER 'hsig.mat'   LAY 4 HSIGN 1.    OUTPUT 20250720.000000 30 MIN
+    
+ BLOCK 'COMPGRID' NOHEADER 'rtp.mat'    LAY 4 RTP 1.      OUTPUT 20250720.000000 30 MIN
+    
+ BLOCK 'COMPGRID' NOHEADER 'wdir.mat'   LAY 4 DIR 1.      OUTPUT 20250720.000000 30 MIN
+    
+ BLOCK 'COMPGRID' NOHEADER 'wlen.mat'   LAY 4 WLEN 1.     OUTPUT 20250720.000000 30 MIN
+    
+ BLOCK 'COMPGRID' NOHEADER 'xp.mat'     LAY 4 XP 1.
+    
+ BLOCK 'COMPGRID' NOHEADER 'yp.mat'     LAY 4 YP 1.
+    
+ 
+    
+ POINTS 'point1' 702200.0 1984100.0
+    
+ SPECOUT 'point1' SPEC1D ABS 'point1.spc1d' OUTPUT 20250720.000000 30 MIN
+    
+ TABLE   'point1' HEADER 'point1.table' HSIGN DIR WLEN OUTPUT 20250720.000000 30 MIN
+    
+ 
+    
+ 
+    
+ 
+    
+ PROP BSBT
+    
+ 
+    
+ COMPUTE STATIONARY 20250720.000000
+ ** Warning          : Limiter is de-activated in case of no quadruplets
+
+----------------------------------------------------------------
+                  COMPUTATIONAL PART OF SWAN
+----------------------------------------------------------------
+
+ Gridresolution       : MXC             284 MYC            450
+                      : MCGRD        127801
+                      : MSC              21 MDC             36
+                      : MTC               1
+                      : NSTATC            0 ITERMX          50
+ Propagation flags    : ITFRE             1 IREFR            1
+ Source term flags    : IBOT              2 ISURF            1
+                      : IWCAP             1 IWIND            0
+                      : ITRIAD            0 IQUAD            0
+                      : IBRAG             0 IQCM             0
+                      : IVEG              1 ITURBV           0
+                      : IMUD              0 IICE             0
+ Spatial step         : DX       0.0000E+00 DY      0.0000E+00
+ Spectral bin         : df/f     0.1746E+00 DDIR    0.1000E+02
+ Physical constants   : GRAV     0.9810E+01 RHO     0.1025E+04
+ Wind input           : WSPEED   0.0000E+00 DIR     0.0000E+00
+                      : ICEWIND  0.00
+ Tail parameters      : E(f)     0.4000E+01 E(k)    0.2500E+01
+                      : A(f)     0.5000E+01 A(k)    0.3000E+01
+ Accuracy parameters  : DREL     0.1000E-01 NPNTS   0.9950E+02
+                      : DHABS    0.5000E-02 CURVAT  0.5000E-02
+                      : GRWMX    0.1000E+21
+ Drying/flooding      : LEVEL    0.0000E+00 DEPMIN  0.1000E+00
+ The nautical  convention for wind and wave directions is used
+ Scheme for geographic propagation is BSBT  
+ Scheme geogr. space  : PROPSC            1 ICMAX            5
+ Scheme spectral space: CSS      0.5000E+00 CDD     0.5000E+00
+ Current is off
+ Quadruplets is off
+ Triads is off
+ Bragg scattering is off
+ QC scattering is off
+ Surfbeat (IEM) is off
+ Collins (`72)        : CFW      0.2800E+00 CFC     0.0000E+00
+ Vegetation due to Dalrymple (1984)
+ Turbulence is off
+ Fluid mud is off
+ Dissipation by sea ice is off
+ W-cap Komen (`84)    : EMPCOF (CDS2):   0.2360E-04
+ W-cap Komen (`84)    : APM (STPM)   :   0.3020E-02
+ W-cap Komen (`84)    : POWST        :   0.2000E+01
+ W-cap Komen (`84)    : DELTA        :   0.1000E+01
+ W-cap Komen (`84)    : POWK         :   0.1000E+01
+ Battjes&Janssen (`78): ALPHA    0.1000E+01 GAMMA   0.7300E+00
+ Set-up is off
+ Diffraction is off
+ Janssen (`89,`90)    : ALPHA    0.1000E-01 KAPPA   0.4100E+00
+ Janssen (`89,`90)    : RHOA     0.1280E+01 RHOW    0.1025E+04
+ 
+ 1st and 2nd gen. wind: CF10     0.1880E+03 CF20    0.5900E+00
+                      : CF30     0.1200E+00 CF40    0.2500E+03
+                      : CF50     0.2300E-02 CF60   -0.2230E+00
+                      : CF70     0.0000E+00 CF80   -0.5600E+00
+                      : RHOAW    0.1249E-02 EDMLPM  0.3600E-02
+                      : CDRAG    0.1230E-02 UMIN    0.1000E+01
+                      : LIM_PM   0.1300E+00
+ 
+ iteration    1; sweep 1
+ iteration    1; sweep 2
+ iteration    1; sweep 3
+ iteration    1; sweep 4
+ not possible to compute, first iteration
+
+ iteration    2; sweep 1
+ iteration    2; sweep 2
+ iteration    2; sweep 3
+ iteration    2; sweep 4
+ accuracy OK in  22.16 % of wet grid points ( 99.50 % required)
+
+ iteration    3; sweep 1
+ iteration    3; sweep 2
+ iteration    3; sweep 3
+ iteration    3; sweep 4
+ accuracy OK in  47.96 % of wet grid points ( 99.50 % required)
+
+ iteration    4; sweep 1
+ iteration    4; sweep 2
+ iteration    4; sweep 3
+ iteration    4; sweep 4
+ accuracy OK in  75.99 % of wet grid points ( 99.50 % required)
+
+ iteration    5; sweep 1
+ iteration    5; sweep 2
+ iteration    5; sweep 3
+ iteration    5; sweep 4
+ accuracy OK in  94.68 % of wet grid points ( 99.50 % required)
+
+ iteration    6; sweep 1
+ iteration    6; sweep 2
+ iteration    6; sweep 3
+ iteration    6; sweep 4
+ accuracy OK in  99.28 % of wet grid points ( 99.50 % required)
+
+ iteration    7; sweep 1
+ iteration    7; sweep 2
+ iteration    7; sweep 3
+ iteration    7; sweep 4
+ accuracy OK in  99.99 % of wet grid points ( 99.50 % required)
+
+  ** WARNING : Differences in wave height at the boundary
+ Relative difference between input and computation >=   0.10
+                         Hs[m]      Hs[m]      Hs[-]
+     ix    iy  index   (input) (computed) (relative)
+  --------------------------------------------------
+     4   450   1801       0.99       0.81       0.17
+     5   450   2251       0.99       0.71       0.28
+     6   450   2701       0.99       0.62       0.37
+     7   450   3151       0.99       0.52       0.48
+     8   450   3601       0.99       0.40       0.59
+     9   450   4051       0.99       0.31       0.68
+    10   450   4501       0.99       0.26       0.74
+    11   450   4951       0.99       0.22       0.77
+    12   450   5401       0.99       0.17       0.83
+    13   450   5851       0.99       0.00       1.00
+    14   450   6301       0.99       0.00       1.00
+    15   450   6751       0.99       0.00       1.00
+    16   450   7201       0.99       0.00       1.00
+    17   450   7651       0.99       0.00       1.00
+    18   450   8101       0.99       0.34       0.66
+    19   450   8551       0.99       0.58       0.41
+    20   450   9001       0.99       0.85       0.13
+ 
+    
+ 
+    
+ 
+    
+ STOP
