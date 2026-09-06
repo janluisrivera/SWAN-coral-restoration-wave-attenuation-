@@ -9,4 +9,4 @@ Long-period swell conditions, &
 Hurricane conditions
 
 Simulation files for all intermediate years (e.g., Years 2, 3, 4, and so forth) are also available. 
-If you would like access to the complete dataset, please contact me by email (janluis.rivera1@upr.edu or janluisrivera10@gmail.com), and I will provide a link to the Google Drive folder containing all simulation files.
+If you would like access to the complete dataset, please contact me via email (janluis.rivera1@upr.edu or janluisrivera10@gmail.com), and I will provide a link to the Google Drive folder containing all simulation files.
