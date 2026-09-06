@@ -4,8 +4,8 @@ The files included in this repository correspond to the 100%, 67%, and 11% coral
 
 Due to GitHub’s storage limitations, only simulation Years 0, 1, 5, 10, 15, and 20 are provided. Each survivorship scenario includes the three environmental conditions analyzed in this study:
 
-Trade-wind conditions
-Long-period swell conditions
+Trade-wind conditions, 
+Long-period swell conditions, &
 Hurricane conditions
 
 Simulation files for all intermediate years (e.g., Years 2, 3, 4, and so forth) are also available. 
